@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>SDC - Home</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <header class="container">
+            <nav class="box">
+                <div class="container" style="float: left;">
+                    <div class="box"><img src="{{ url_for('static', filename='aset/sdc.png') }}" width="20%"></div>
+                </div>
+                <div class="container" style="float: right;">
+                    <div class="box"><a href="/">HOME</a></div>
+                    <div class="box"><a href="/#about">ABOUT</a></div>
+                    <div class="box"><a href="detect">DETECT</a></div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div id="banner"></div>
+            <div id="detect">
+                <table width="80%" style="margin:5% auto 5% auto; font-size: 20px;">
+                    <tr>
+                        <td align="center">
+                            <h1>SKIN DISEASE CLASSIFICATION</h1><br><hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <form action='/', method="post" enctype="multipart/form-data">          
+                                <input class="input_image" type="file" name="image"><br><br>
+                                <input class="green_button" onmouseover="buttonHover(this)" onmouseout="buttonHoverCancel2(this)" type="submit" value="Predict">     
+                            </form>          
+                            {% if prediction %}         
+                            <p class="text-center"> Hasil Prediksinya adalah {{prediction}}</p>     {% endif %}   
+                        </td>
+                    </tr>
+                </table>       
+            </div>
+            <div id="menu" style="background:url(../static/aset/about.jpg) no-repeat center center; background-size:cover;">
+                <div id="menukiri">
+                    <div id="deskripsi"><h1>About</h1>
+                    <p align="justify">SDC atau Skin Disease Classification merupakan sebuah model Machine Learning yang dapat mengklasifikasikan berbagai jenis penyakit kulit dengan mengupload foto dari kulit anda yang terkena penyakit tersebut dan diimplementasikan ke dalam sebuah website.<br><br></p>
+                    <table width="20%" height="10%" onmouseover="buttonHover(this)" onmouseout="buttonHoverCancel(this)">
+                        <tr>
+                            <td align="center"><a href="/#about">About &#9654;</a></td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>
+            </div>
+            <div id="menu" style="background:url(../static/aset/detect.jpg) no-repeat center center; background-size:cover;">
+                <div id="menukanan">
+                    <div id="deskripsi"><h1>Detect</h1>
+                    <p align="justify">Anda dapat mendeteksi penyakit kulit yang anda alami pada halaman Detect. Anda hanya perlu mengupload foto dari bagian tubuh anda yang terkena penyakit kulit dan anda akan tahu penyakit kulit apa yang anda alami.<br><br></p>
+                    <table width="20%" height="10%" onmouseover="buttonHover(this)" onmouseout="buttonHoverCancel(this)">
+                        <tr>
+                            <td align="center"><a href="detect">Detect &#9654;</a></td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p style="color: white;">&#169; 2021 Skin Disease Classification</p>
+        </footer>
+        <script src="{{ url_for('static', filename='js.js') }}"></script>
+    </body>
+</html>

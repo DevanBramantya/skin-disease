@@ -1,3 +1,14 @@
+Team : ID-CSD-183
+
+Tema : Solusi Kesehatan Diri & Mental
+
+Judul Proyek : Skin Disease Classification (SDC)
+
+Nama Anggota :
+1. M248R6220 - Ahmad Arbain
+2. M014R6040 - Devan Bramantya
+
+
 # Bagaimana Cara Penggunaan Aplikasi
 
 ## Background 

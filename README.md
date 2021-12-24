@@ -46,9 +46,11 @@ Arsitektur CNN terbilang mirip dengan pola koneksi neuron atau sel saraf dalam o
 3. Deployment Model
 
 ## Cara Penggunaan 
-1. Meakses website skin diseases classification
-2. Menyiapkan gambar yang akan diperediksi
-3. Mengupload gambar ke website
-4. Melakukan Prediksi 
+1. Jalankan file App.py pada folder Front-End Web
+2. Buka URL yang tertera saat menjalankan App.py (Contoh URL : http://127.0.0.1:3000/)
+![image](https://user-images.githubusercontent.com/71859654/147342234-7713d0ac-b7f6-43e7-bf81-ee95e1225b63.png)
+3. Klik pada Menu Detect untuk masuk ke halaman Detect
+4. Klik pada tombol Pilih File untuk memilih foto yang akan diprediksi
+5. Klik pada tombol Predict untuk mendapatkan hasil prediksi
 
 
